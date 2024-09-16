@@ -1,7 +1,7 @@
 # CuzIMatter
 CuzIMatter Modified Website
 
-This project is a draft of an alternate look to the Cuz I Matter animal rescue. 
+This project is a draft of an alternate look to the Cuz I Matter animal rescues current website. 
 
 Color Theme for the Website:
 
