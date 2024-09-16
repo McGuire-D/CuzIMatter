@@ -1,0 +1,405 @@
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #F5F0E1; /* Light beige background */
+    color: #2F2F2F; /* Dark charcoal for readability */
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+    background-color: #A57D5D; /* Warm brown */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+
+.site-header h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+}
+
+/* Navigation Links */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #77A6A1; /* Soft green background for 3D effect */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    transition: all 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: #5D8780; /* Darker green on hover */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15); /* Deepens shadow on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Active or Current Page Link */
+.main-nav ul li a.active {
+    background-color: #A57D5D; /* Warm brown for the active page */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+}
+
+.hero {
+    background-image: url('images/Landscape.jpg'); /* Use your field image here */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Creates a parallax effect when scrolling */
+    color: #ffffff; /* Ensures the text is readable on the background */
+    padding: 120px 0; /* Increases padding to give more space to the hero section */
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adds a semi-transparent overlay to ensure readability */
+}
+
+.hero h2, .hero p, .hero a {
+    position: relative;
+    z-index: 1; /* Keeps text and buttons above the overlay */
+}
+
+/* Adoptable Pets Gallery */
+.adopt-me-gallery {
+    background-color: #F5F0E1; /* Light Beige to blend with the design */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.adopt-me-gallery h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2F2F2F; /* Dark Charcoal for headings */
+}
+
+.adopt-me-images {
+    display: flex;
+    justify-content: center; /* Centers the images */
+    gap: 20px; /* Adds space between images */
+}
+
+.adopt-image {
+    max-width: 200px; /* Controls the width of the images */
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .adopt-me-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+}
+
+.button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 20px 10px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-primary {
+    background-color: #77A6A1;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for 3D effect */
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.button-primary:hover {
+    background-color: #5D8780; /* Darker green on hover */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15); /* Deepens shadow on hover */
+    transform: translateY(-3px); /* Slightly "lifts" the button on hover */
+}
+
+.button-secondary {
+    background-color: #ffffff;
+    color: #A57D5D;
+    border: 2px solid #A57D5D;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.button-secondary:hover {
+    background-color: #F5F0E1;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.button-accent {
+    background-color: #F5F0E1;
+    color: #A57D5D;
+    border: 2px solid #A57D5D;
+}
+
+.button-accent:hover {
+    background-color: #DFD4C3; /* Darker beige for hover */
+    transform: scale(1.05);
+}
+
+/* Adoptable Pets Section */
+.adopt-pets-section {
+    background-color: #F5F0E1;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.adopt-pets-section h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.pet {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.pet img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.pet h4 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.pet p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.featured-pet {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.featured-pet img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.featured-pet-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.foster-info {
+    background-color: #F5F0E1;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Hero Section */
+.contact-hero {
+    background-image: url('images/Landscape.jpg'); /* Optional hero background */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background-color: #F5F0E1; /* Light beige background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    color: #2F2F2F;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #77A6A1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #5D8780;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #A57D5D;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1); /* Shadow on top to lift the footer */
+}
+
+.site-footer p {
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Slight shadow for text depth */
+}
+
+.site-footer .social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.site-footer .social-links a:hover {
+    color: #77A6A1;
+    transform: translateY(-2px); /* Lifts social icons on hover */
+}
+
+.site-footer .venmo-qr-code {
+    max-width: 100px;
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth to the image */
+}
+
+/* Foster Info Page */
+.foster-info-page {
+    background-image: url('images/Landscape.jpg'); /* Use the field image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    position: relative;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.foster-info-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.foster-info-page .container {
+    position: relative;
+    z-index: 2; /* Ensure text stays above the overlay */
+}
+
+.foster-info-page h2, .foster-info-page p, .foster-info-page a {
+    color: #ffffff; /* White text to contrast the background */
+}
+
+.foster-info-page a {
+    text-decoration: underline;
+    color: #F5F0E1; /* Light beige links */
+}

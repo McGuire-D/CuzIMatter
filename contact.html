@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Cuz I Matter Animal Rescue</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">"Cuz I Matter" Animal Rescue</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+					<li><a href="#">Happy Tails</a></li>
+                    <li><a href="foster.html">Foster</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Whether you want to ask about our services, fostering, or anything else, feel free to reach out.</p>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <h3>Get in Touch</h3>
+            <p><strong>Email:</strong> <a href="mailto:cuzimatteranimalrescue@gmail.com">cuzimatteranimalrescue@gmail.com</a></p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Address:</strong> Pflugerville, TX, USA</p>
+
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="button button-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Cuz I Matter Animal Rescue - Pflugerville, TX</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/cuzimatteranimalrescue/?fref=ts" target="_blank">Facebook</a>
+                <a href="https://www.amazon.com/hz/wishlist/ls/139F95Z2BKCKW" target="_blank">Amazon Wishlist</a>
+                <a href="#"><img src="images/Venmo.jpg" alt="Venmo QR Code" class="venmo-qr-code"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
